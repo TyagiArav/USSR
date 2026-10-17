@@ -1,46 +1,582 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<title>United Socialist Student Republic Campaign</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 </head>
 <body>
-	<header><FONT COLOR="#FFD700"> 
-		<h1>United Socialist Student Republic</h1>
-		<nav>
-			<ul>
-				<li><a href="#environment">Environment and Conservation</a></li>
-				<li><a href="#inflation">Inflation and Economy</a></li>
-				<li><a href="#gun">Gun Violence</a></li>
-				<li><a href="#rights">People’s Rights and Full Equality</a></li>
-				<li><a href="#frat">Frat Parties</a></li>
-			</ul>
-		</nav></FONT>
-	</header>
-	<main>
-		<section id="environment">
-			<h2>Environment and Conservation</h2>
-			<p>Protecting the environment is our top priority. We will promote sustainable practices and renewable energy sources to ensure a healthy planet for future generations.</p>
-		</section>
-		<section id="inflation">
-			<h2>Inflation and Economy</h2>
-			<p>We believe that everyone should have access to a fair and stable economy. We will work to reduce inflation and provide economic opportunities for all students.</p>
-		</section>
-		<section id="gun">
-			<h2>Gun Violence</h2>
-			<p>We will work to end gun violence on campus by implementing common-sense gun laws that protect our students and community.</p>
-		</section>
-		<section id="rights">
-			<h2>People’s Rights and Full Equality</h2>
-			<p>We believe in equal rights for all students regardless of race, gender, or sexual orientation. We will fight to ensure that all students are treated with dignity and respect.</p>
-		</section>
-		<section id="frat">
-			<h2>Frat Parties</h2>
-			<p>We understand that students want to have fun, but we also believe in responsible partying. We will work with fraternities to ensure that parties are safe and respectful to all students.</p>
-		</section>
-	</main>
-	<footer>
-		<p>&copy; United Socialist Student Republic Campaign</p>
-	</footer>
+<title>United Socialist Student Republic</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Golos+Text:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: a constructivist campaign poster that unrolls down the phone — red wedge hero, ticker, decrees, then a desk of working "People's Services". */
+:root {
+  --paper: #efe6d2;
+  --paper-2: #e4d8bf;
+  --ink: #1b1513;
+  --muted: #65584e;
+  --red: #c4231b;
+  --red-deep: #8a1711;
+  --gold: #e8b330;
+  --on-red: #fbf3e2;
+  --display: "Unbounded", "Arial Black", Impact, sans-serif;
+  --body: "Golos Text", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --wrap: 1080px;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; overflow-x: hidden; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--ink); }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.02; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.label { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+
+/* top bar */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--ink); color: var(--on-red); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 10px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: 0.04em; }
+.brand svg { width: 22px; height: 22px; flex: none; }
+.bar nav { display: flex; gap: 18px; font-size: 14px; }
+.bar nav a { text-decoration: none; opacity: 0.85; }
+.bar nav a:hover { opacity: 1; color: var(--gold); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: 0.03em; text-transform: uppercase; text-decoration: none; border: 2px solid var(--ink); background: var(--ink); color: var(--on-red); padding: 12px 18px; cursor: pointer; transition: transform .12s ease, box-shadow .12s ease; box-shadow: 4px 4px 0 var(--red-deep); }
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--red-deep); }
+.btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--red-deep); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.gold { background: var(--gold); color: var(--ink); border-color: var(--ink); }
+.bar .btn { padding: 8px 12px; font-size: 12px; box-shadow: none; background: var(--red); border-color: var(--red); }
+@media (max-width: 720px) { .bar nav { display: none; } }
+
+/* hero */
+.hero { position: relative; overflow: hidden; background: var(--red); color: var(--on-red); }
+.hero::before { content: ""; position: absolute; inset: 0; background: var(--ink); clip-path: polygon(62% 0, 100% 0, 100% 100%, 38% 100%); }
+.hero::after { content: ""; position: absolute; width: 140%; height: 40px; left: -20%; bottom: 4px; background: var(--gold); transform: rotate(-9deg); opacity: .95; }
+.hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: center; padding-block: 48px 64px; }
+.hero h1 { font-size: clamp(44px, 9vw, 104px); font-weight: 900; text-transform: uppercase; }
+.hero h1 span { display: block; color: var(--gold); }
+.hero .lede { margin-top: 20px; font-size: clamp(17px, 2.2vw, 20px); max-width: 34ch; }
+.hero .eyebrow { margin-bottom: 18px; display: inline-block; background: var(--ink); padding: 6px 10px; }
+.hero .ctas { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
+.hero .ctas .btn.ghost { color: var(--on-red); border-color: var(--on-red); box-shadow: 4px 4px 0 var(--ink); }
+.star-wrap { position: relative; justify-self: center; width: min(100%, 380px); aspect-ratio: 1; max-width: 100%; }
+.star-wrap svg { width: 100%; height: 100%; animation: spin 60s linear infinite; filter: drop-shadow(10px 10px 0 rgba(0,0,0,.35)); }
+@keyframes spin { to { transform: rotate(360deg); } }
+.stamp { position: absolute; right: 0; bottom: 6%; transform: rotate(-12deg); border: 3px solid var(--on-red); color: var(--on-red); padding: 8px 12px; font-family: var(--mono); font-weight: 700; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; text-align: center; line-height: 1.3; background: rgba(27,21,19,.55); }
+.stamp b { display: block; font-family: var(--display); font-size: 22px; letter-spacing: 0; }
+@media (max-width: 760px) {
+  .hero .wrap { grid-template-columns: 1fr; padding-block: 32px 56px; }
+  .hero::before { clip-path: polygon(70% 0, 100% 0, 100% 100%, 20% 100%); opacity: .9; }
+  .star-wrap { order: -1; width: 170px; justify-self: start; margin-bottom: -4px; }
+  .stamp { right: -70px; bottom: 10%; font-size: 10px; }
+  .stamp b { font-size: 16px; }
+}
+
+/* ticker */
+.ticker { background: var(--ink); color: var(--gold); overflow: hidden; border-block: 3px solid var(--gold); }
+.ticker-track { display: flex; width: max-content; animation: tick 55s linear infinite; padding-block: 10px; }
+.ticker-track span { font-family: var(--mono); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; padding-right: 36px; }
+.ticker-track span::before { content: "★"; margin-right: 12px; color: var(--red); }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+/* sections */
+section { padding-block: 64px; }
+.sec-head { display: grid; gap: 10px; margin-bottom: 32px; max-width: 46ch; }
+.sec-head .label { color: var(--red); }
+.sec-head h2 { font-size: clamp(30px, 5.5vw, 52px); font-weight: 900; text-transform: uppercase; }
+.sec-head p { color: var(--muted); }
+
+/* decrees */
+.decrees { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 0; border-top: 3px solid var(--ink); }
+.decree { padding: 24px 0 28px; border-bottom: 1px solid color-mix(in srgb, var(--ink) 30%, transparent); display: grid; grid-template-columns: 64px 1fr; gap: 0 16px; min-width: 0; }
+@media (min-width: 700px) { .decree { padding-right: 28px; } }
+.decree .no { font-family: var(--display); font-weight: 900; font-size: 44px; color: var(--red); line-height: 1; grid-row: span 4; }
+.decree > :not(.no) { grid-column: 2; }
+@media (max-width: 500px) { .decree { grid-template-columns: 40px 1fr; gap: 0 12px; } .decree .no { font-size: 34px; } }
+.decree .label { color: var(--muted); }
+.decree h3 { font-size: 21px; font-weight: 700; margin: 6px 0 10px; }
+.decree p { max-width: 60ch; }
+.decree .fine { margin-top: 10px; font-size: 13px; color: var(--muted); font-style: italic; }
+
+/* services */
+.services { background: var(--ink); color: var(--on-red); }
+.services .sec-head p { color: color-mix(in srgb, var(--on-red) 70%, transparent); }
+.services .sec-head .label { color: var(--gold); }
+.desk { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+.svc { background: var(--paper); color: var(--ink); padding: 22px; display: flex; flex-direction: column; gap: 14px; min-width: 0; grid-column: span 2; position: relative; }
+.svc.wide { grid-column: span 3; }
+.svc .label { color: var(--red); }
+.svc h3 { font-size: 20px; font-weight: 700; }
+.svc .out { margin-top: auto; background: var(--paper-2); border-left: 4px solid var(--red); padding: 12px 14px; font-size: 15px; min-height: 3.2em; }
+@media (max-width: 900px) { .desk { grid-template-columns: 1fr 1fr; } .svc, .svc.wide { grid-column: span 1; } .svc.full-sm { grid-column: span 2; } }
+@media (max-width: 600px) { .desk { grid-template-columns: 1fr; } .svc.full-sm { grid-column: span 1; } }
+
+.week { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.day { text-align: center; padding: 8px 0 6px; border: 2px solid var(--ink); font-family: var(--mono); font-weight: 700; font-size: 11px; }
+.day i { display: block; font-style: normal; font-size: 16px; line-height: 1.2; margin-top: 2px; }
+.day.hw { background: var(--ink); color: var(--paper); }
+.day.today { outline: 3px solid var(--red); outline-offset: 2px; }
+
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.step { width: 44px; height: 44px; border: 2px solid var(--ink); background: var(--paper); font-family: var(--display); font-size: 20px; cursor: pointer; color: var(--ink); }
+.step:hover { background: var(--gold); }
+input[type="number"], input[type="text"] { font: inherit; font-size: 16px; height: 44px; border: 2px solid var(--ink); background: #fffaf0; color: var(--ink); padding: 0 12px; min-width: 0; border-radius: 0; }
+input[type="number"] { width: 80px; text-align: center; font-family: var(--display); font-weight: 700; }
+input[type="text"] { flex: 1 1 160px; }
+.meter { height: 12px; background: var(--paper-2); border: 2px solid var(--ink); position: relative; }
+.meter b { position: absolute; inset: 0 auto 0 0; background: var(--red); transition: width .25s ease; }
+.chip { font: inherit; font-size: 14px; padding: 7px 12px; border: 2px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--red); border-color: var(--red); color: var(--on-red); }
+
+.coupon { border: 2px dashed var(--ink); padding: 14px 16px; background: #fffaf0; display: grid; gap: 4px; position: relative; overflow: hidden; }
+.coupon .label { color: var(--muted); font-size: 10px; }
+.coupon strong { font-family: var(--display); font-size: 18px; text-transform: uppercase; overflow-wrap: anywhere; }
+.coupon .meta { font-family: var(--mono); font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.coupon::after { content: "APPROVED"; position: absolute; right: -6px; top: 10px; transform: rotate(14deg); font-family: var(--mono); font-weight: 700; font-size: 12px; color: var(--red); border: 2px solid var(--red); padding: 2px 6px; opacity: .8; }
+
+.vote { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tally { font-family: var(--mono); font-size: 13px; display: grid; gap: 6px; }
+.tally div { display: grid; grid-template-columns: 34px 1fr 48px; gap: 8px; align-items: center; }
+.tally .meter { height: 10px; }
+
+/* plan */
+.plan { display: grid; gap: 22px; max-width: 760px; }
+.goal { display: grid; gap: 8px; }
+.goal-top { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.goal-top h3 { font-family: var(--body); font-weight: 700; font-size: 18px; letter-spacing: 0; }
+.goal-top .pct { font-family: var(--display); font-weight: 900; font-size: 22px; font-variant-numeric: tabular-nums; color: var(--red); flex: none; }
+.goal .meter { height: 18px; }
+.goal .meter b { background: repeating-linear-gradient(-45deg, var(--red) 0 10px, var(--red-deep) 10px 20px); }
+.goal.done .meter b { background: var(--ink); }
+.goal.done .pct { color: var(--ink); }
+.goal small { color: var(--muted); font-size: 14px; }
+
+/* testimonials */
+.voices { background: var(--gold); }
+.quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 28px; }
+blockquote { margin: 0; display: grid; gap: 12px; align-content: start; }
+blockquote p { font-family: var(--display); font-weight: 500; font-size: 19px; line-height: 1.35; }
+blockquote footer { font-size: 14px; }
+blockquote footer b { display: block; }
+
+/* join */
+.join .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+@media (max-width: 800px) { .join .wrap { grid-template-columns: 1fr; } }
+form { display: grid; gap: 14px; margin-top: 24px; }
+form label { display: grid; gap: 6px; font-weight: 500; font-size: 15px; }
+form input[type="text"] { width: 100%; }
+.card { background: var(--red); color: var(--on-red); padding: 26px; display: grid; grid-template-columns: 1fr auto; gap: 18px 16px; box-shadow: 10px 10px 0 var(--ink); max-width: 460px; width: 100%; justify-self: center; min-width: 0; transform: rotate(-1.5deg); }
+.card .label { opacity: .85; font-size: 11px; }
+.card h3 { font-size: clamp(24px, 4vw, 32px); font-weight: 900; text-transform: uppercase; overflow-wrap: anywhere; grid-column: 1 / -1; }
+.card svg { width: 52px; height: 52px; }
+.card dl { grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; margin: 0; font-size: 14px; border-top: 2px solid color-mix(in srgb, var(--on-red) 50%, transparent); padding-top: 14px; }
+.card dt { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; opacity: .8; padding-top: 2px; }
+.card dd { margin: 0; font-weight: 700; overflow-wrap: anywhere; }
+
+.site-foot { background: var(--ink); color: color-mix(in srgb, var(--on-red) 75%, transparent); font-size: 14px; }
+.site-foot .wrap { padding-block: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+.site-foot strong { color: var(--on-red); }
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="United Socialist Student Republic, back to top">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><polygon fill="#e8b330" points="50,4 61,38 97,38 68,59 79,94 50,72 21,94 32,59 3,38 39,38"/></svg>
+      USSR
+    </a>
+    <nav aria-label="Sections">
+      <a href="#decrees">Decrees</a>
+      <a href="#services">Services</a>
+      <a href="#plan">Five-Year Plan</a>
+    </nav>
+    <a class="btn" href="#join">Join the Party</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding-block:0">
+    <div class="wrap">
+      <div>
+        <span class="label eyebrow">Student Council Elections · Ballot Line 1</span>
+        <h1>What's yours <span>is ours.</span></h1>
+        <p class="lede">Vote the United Socialist Student Republic. Free ice cream, homework on two days a week, and a Five-Year Plan we will finish before finals.</p>
+        <div class="ctas">
+          <a class="btn gold" href="#decrees">Read the Decrees</a>
+          <a class="btn ghost" href="#services">Try Our Services</a>
+        </div>
+      </div>
+      <div class="star-wrap" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><polygon fill="#e8b330" points="50,4 61,38 97,38 68,59 79,94 50,72 21,94 32,59 3,38 39,38"/><polygon fill="#c4231b" points="50,22 56,41 76,41 60,53 66,72 50,60 34,72 40,53 24,41 44,41"/></svg>
+        <div class="stamp">Turnout<b>112%</b>Projected</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-label="Campaign headlines">
+    <div class="ticker-track" id="ticker"></div>
+  </div>
+
+  <section id="decrees">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">The Platform</span>
+        <h2>Five decrees for the people</h2>
+        <p>Signed, stamped, and laminated in the student union. Our positions on the issues that keep you up at night, aside from the 8 a.m. class.</p>
+      </div>
+      <div class="decrees">
+        <article class="decree">
+          <span class="no">1</span>
+          <span class="label">Environment &amp; Conservation</span>
+          <h3>Plant the trees. Then collectivize them.</h3>
+          <p>Every student plants one tree. The trees belong to everyone, so nobody may carve initials into them. Solar panels go on every roof, including the roof of the parking office, which is the only thing that office will produce.</p>
+          <p class="fine">Recycling becomes mandatory. Including old jokes. Especially this one.</p>
+        </article>
+        <article class="decree">
+          <span class="no">2</span>
+          <span class="label">Inflation &amp; Economy</span>
+          <h3>One meal swipe, one potato.</h3>
+          <p>We peg the dining-hall swipe to the potato, the most stable currency known to humankind. Textbook prices are frozen at their 1987 level. The campus bookstore will be renamed the People's Bookstore and will finally have the edition your professor asked for.</p>
+          <p class="fine">Economists consulted: one. He was a sophomore. He agreed.</p>
+        </article>
+        <article class="decree">
+          <span class="no">3</span>
+          <span class="label">Campus Safety</span>
+          <h3>A campus where the only shots are flu shots.</h3>
+          <p>Real safety first: more counselors, working blue-light phones, lit walkways, and a safe-ride van that shows up in under four hours. The only arms race on campus will be the annual arm-wrestling tournament.</p>
+          <p class="fine">Water balloons remain legal during Spring Fest, in designated zones.</p>
+        </article>
+        <article class="decree">
+          <span class="no">4</span>
+          <span class="label">People's Rights &amp; Full Equality</span>
+          <h3>Everyone equal. Everyone gets the same dorm room.</h3>
+          <p>Equal rights for every student regardless of race, gender, religion, or who they are. Everyone is treated with dignity. Also, every dorm room is now identical. Yes, it is the one with the radiator that clanks at 3 a.m. Fairness has a price.</p>
+          <p class="fine">Seniors lose priority registration. Freshmen lose nothing, because they had nothing.</p>
+        </article>
+        <article class="decree">
+          <span class="no">5</span>
+          <span class="label">Frat Parties</span>
+          <h3>There are no more parties. There is only the Party.</h3>
+          <p>We support fun, done safely. All Greek life is merged into one fraternity, Alpha Sigma Sigma, which hosts one enormous, well-lit, respectful event every Friday. Sober monitors, free water, and a playlist voted on by the people.</p>
+          <p class="fine">The DJ is elected. The DJ can be recalled.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Ministry of Student Affairs</span>
+        <h2>The People's Services</h2>
+        <p>Our policies already work. Try them below. No forms in triplicate required.</p>
+      </div>
+      <div class="desk">
+        <div class="svc wide full-sm">
+          <span class="label">Decree 6 · No Homework Policy</span>
+          <h3>Is homework legal today?</h3>
+          <div class="week" id="week" role="list" aria-label="Weekly homework schedule"></div>
+          <p class="out" id="hwOut" aria-live="polite"></p>
+        </div>
+
+        <div class="svc wide">
+          <span class="label">Decree 7 · More Allowed Absences</span>
+          <h3>Absence quota calculator</h3>
+          <div class="row">
+            <button class="step" type="button" id="absMinus" aria-label="One fewer absence">−</button>
+            <input type="number" id="absences" min="0" max="40" value="4" aria-label="Absences so far">
+            <button class="step" type="button" id="absPlus" aria-label="One more absence">+</button>
+            <span style="font-size:14px;color:var(--muted)">of 10 per semester</span>
+          </div>
+          <div class="meter" aria-hidden="true"><b id="absBar"></b></div>
+          <p class="out" id="absOut" aria-live="polite"></p>
+        </div>
+
+        <div class="svc">
+          <span class="label">Decree 8 · Free Ice Cream</span>
+          <h3>Ration coupon office</h3>
+          <div class="row" id="flavors"></div>
+          <div class="row">
+            <input type="text" id="flavorIn" placeholder="Or type a flavor" aria-label="Custom flavor" maxlength="40">
+            <button class="btn" type="button" id="flavorGo" style="padding:10px 14px">Issue</button>
+          </div>
+          <div class="coupon" aria-live="polite">
+            <span class="label">Ration coupon · One (1) scoop</span>
+            <strong id="cpFlavor">Chocolate</strong>
+            <div class="meta"><span id="cpNo">No. 000417</span><span id="cpQueue">Queue position: 1,204</span></div>
+          </div>
+        </div>
+
+        <div class="svc">
+          <span class="label">Decree 9 · Lunch Reform</span>
+          <h3>The People's Drive-Thru</h3>
+          <p style="font-size:15px">School lunch is replaced with McDonald's. All orders are pooled and shared equally.</p>
+          <div class="row">
+            <input type="text" id="order" value="Big Mac and large fries" aria-label="Your order" maxlength="60">
+            <button class="btn" type="button" id="orderGo" style="padding:10px 14px">Order</button>
+          </div>
+          <p class="out" id="orderOut" aria-live="polite"></p>
+        </div>
+
+        <div class="svc full-sm">
+          <span class="label">Decree 10 · Referendum</span>
+          <h3>Replace every vending machine and water bubbler with a borscht fountain?</h3>
+          <div class="vote">
+            <button class="btn" type="button" id="yes">Yes</button>
+            <button class="btn ghost" type="button" id="no">No</button>
+          </div>
+          <div class="tally">
+            <div><span>YES</span><span class="meter"><b id="yesBar" style="width:100%"></b></span><span id="yesPct">100%</span></div>
+            <div><span>NO</span><span class="meter"><b id="noBar" style="width:0%"></b></span><span id="noPct">0%</span></div>
+          </div>
+          <p class="out" id="voteOut" aria-live="polite">Polls are open. Every vote counts. We know exactly how.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plan">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Progress Report · Week 3 of Semester</span>
+        <h2>The Five-Year Plan</h2>
+        <p>Five years of progress, scheduled for one semester. Figures supplied by the Ministry of Figures.</p>
+      </div>
+      <div class="plan">
+        <div class="goal done">
+          <div class="goal-top"><h3>Rename the quad "Red Square"</h3><span class="pct">100%</span></div>
+          <div class="meter"><b style="width:100%"></b></div>
+          <small>Complete. The sign is a bedsheet, but it is a very red bedsheet.</small>
+        </div>
+        <div class="goal">
+          <div class="goal-top"><h3>Abolish the 8 a.m. class</h3><span class="pct">87%</span></div>
+          <div class="meter"><b style="width:87%"></b></div>
+          <small>The last holdout is Organic Chemistry. Negotiations continue.</small>
+        </div>
+        <div class="goal">
+          <div class="goal-top"><h3>Nap pods on every library floor</h3><span class="pct">64%</span></div>
+          <div class="meter"><b style="width:64%"></b></div>
+          <small>Currently a beanbag on floor 2. Waitlist: 900 comrades.</small>
+        </div>
+        <div class="goal">
+          <div class="goal-top"><h3>Wi-Fi that works in the basement</h3><span class="pct">3%</span></div>
+          <div class="meter"><b style="width:3%"></b></div>
+          <small>One bar was observed on a Tuesday. Scientists are investigating.</small>
+        </div>
+        <div class="goal">
+          <div class="goal-top"><h3>One parking spot per student</h3><span class="pct">0%</span></div>
+          <div class="meter"><b style="width:0%"></b></div>
+          <small>Sabotaged by the Parking Bourgeoisie. They know what they did.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="voices">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label" style="color:var(--red-deep)">Testimonials</span>
+        <h2>The people have spoken</h2>
+      </div>
+      <div class="quotes">
+        <blockquote>
+          <p>"I used to have one sandwich. Now we all have a little bit of everyone's sandwich. I have never felt closer to my roommate's tuna."</p>
+          <footer><b>Dmitri K.</b>Sophomore, Undeclared (declared by the State)</footer>
+        </blockquote>
+        <blockquote>
+          <p>"They promised me two homework days a week and they delivered. Honestly the first politician who ever did anything."</p>
+          <footer><b>Priya S.</b>Junior, Political Science</footer>
+        </blockquote>
+        <blockquote>
+          <p>"I voted no on the borscht fountains. My vote was counted. Twice. As yes. Democracy is beautiful."</p>
+          <footer><b>Marcus T.</b>Senior, Former Vending Machine Enthusiast</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="join" id="join">
+    <div class="wrap">
+      <div>
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="label">Enlistment Office</span>
+          <h2>Join the Party</h2>
+          <p>Fill this in to receive your official membership card. Membership is free, because money is a social construct and also because we have none.</p>
+        </div>
+        <form id="joinForm">
+          <label for="jName">Your name
+            <input type="text" id="jName" maxlength="40" placeholder="e.g. Alex Petrov" autocomplete="name">
+          </label>
+          <label for="jMajor">Major
+            <input type="text" id="jMajor" maxlength="40" placeholder="e.g. Computer Science">
+          </label>
+          <div><button class="btn" type="submit">Print my card</button></div>
+        </form>
+      </div>
+      <div class="card" aria-live="polite">
+        <span class="label">Party Membership Card · Sample</span>
+        <svg viewBox="0 0 100 100" aria-hidden="true"><polygon fill="#e8b330" points="50,4 61,38 97,38 68,59 79,94 50,72 21,94 32,59 3,38 39,38"/></svg>
+        <h3 id="cName">Comrade You</h3>
+        <dl>
+          <dt>Member no.</dt><dd id="cNo">0001917</dd>
+          <dt>Major</dt><dd id="cMajor">Undeclared (declared by the State)</dd>
+          <dt>Assigned duty</dt><dd id="cDuty">Guarding the good microwave in the student union</dd>
+          <dt>Rank</dt><dd>Comrade, First Class</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p><strong>Paid for by the Committee for the Fair Redistribution of Snacks.</strong></p>
+    <p>This site is a parody. No governments were overthrown in the making of this campaign.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var rand = function (a, b) { return Math.floor(Math.random() * (b - a + 1)) + a; };
+  var fmt = function (n) { return n.toLocaleString("en-US"); };
+  var pick = function (arr) { return arr[rand(0, arr.length - 1)]; };
+
+  // Ticker (duplicated so the loop is seamless)
+  var headlines = [
+    "Library to stay open 25 hours a day",
+    "Parking tickets reclassified as donations to the people",
+    "All group projects abolished; all projects are now group projects",
+    "8 a.m. class sent to Siberia",
+    "Dining hall announces potato-based economy",
+    "Campus squirrels granted full voting rights",
+    "Rival campaign's posters redistributed to recycling",
+    "Mandatory nap hour passes unanimously"
+  ];
+  var t = $("ticker");
+  headlines.concat(headlines).forEach(function (h) {
+    var s = document.createElement("span"); s.textContent = h; t.appendChild(s);
+  });
+
+  // Homework: allowed only Tuesday and Thursday
+  var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  var full = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var hwDays = [2, 4];
+  var today = new Date().getDay();
+  var week = $("week");
+  [1, 2, 3, 4, 5, 6, 0].forEach(function (d) {
+    var el = document.createElement("div");
+    var hw = hwDays.indexOf(d) > -1;
+    el.className = "day" + (hw ? " hw" : "") + (d === today ? " today" : "");
+    el.setAttribute("role", "listitem");
+    el.innerHTML = days[d] + "<i>" + (hw ? "✎" : "☭") + "</i>";
+    el.setAttribute("aria-label", full[d] + (hw ? ": homework permitted" : ": homework banned") + (d === today ? " (today)" : ""));
+    week.appendChild(el);
+  });
+  $("hwOut").textContent = hwDays.indexOf(today) > -1
+    ? "It is " + full[today] + ". Homework is regrettably legal today. Get to work, comrade."
+    : "It is " + full[today] + ". Homework is banned by decree. Any professor assigning it will be reported to the Committee.";
+
+  // Absences: 10 allowed
+  var abs = $("absences");
+  function renderAbs() {
+    var n = Math.max(0, Math.min(40, parseInt(abs.value, 10) || 0));
+    var left = 10 - n;
+    $("absBar").style.width = Math.min(100, n * 10) + "%";
+    var msg;
+    if (n === 0) msg = "Zero absences. A model citizen. Frankly, suspicious.";
+    else if (left > 3) msg = "You have " + left + " absences remaining. Spend them wisely, comrade.";
+    else if (left > 0) msg = "Only " + left + " absence" + (left === 1 ? "" : "s") + " left. Ration carefully.";
+    else if (left === 0) msg = "Quota reached exactly. The State admires your precision.";
+    else msg = "You are " + (-left) + " over quota. Report to your professor for re-education (office hours, Tue 2–3 p.m.).";
+    $("absOut").textContent = msg;
+  }
+  abs.addEventListener("input", renderAbs);
+  $("absMinus").addEventListener("click", function () { abs.value = Math.max(0, (parseInt(abs.value, 10) || 0) - 1); renderAbs(); });
+  $("absPlus").addEventListener("click", function () { abs.value = Math.min(40, (parseInt(abs.value, 10) || 0) + 1); renderAbs(); });
+  renderAbs();
+
+  // Ice cream coupons
+  var flavors = ["Chocolate", "Vanilla", "Strawberry", "Cookie Dough"];
+  var fWrap = $("flavors");
+  function issue(flavor) {
+    flavor = (flavor || "").trim();
+    if (!flavor) { $("flavorIn").focus(); return; }
+    $("cpFlavor").textContent = flavor;
+    $("cpNo").textContent = "No. " + String(rand(1, 999999)).padStart(6, "0");
+    $("cpQueue").textContent = "Queue position: " + fmt(rand(200, 9000));
+    Array.prototype.forEach.call(fWrap.children, function (c) {
+      c.setAttribute("aria-pressed", String(c.textContent === flavor));
+    });
+  }
+  flavors.forEach(function (f, i) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.textContent = f;
+    b.setAttribute("aria-pressed", String(i === 0));
+    b.addEventListener("click", function () { issue(f); });
+    fWrap.appendChild(b);
+  });
+  $("flavorGo").addEventListener("click", function () { issue($("flavorIn").value); $("flavorIn").value = ""; });
+  $("flavorIn").addEventListener("keydown", function (e) { if (e.key === "Enter") { issue(this.value); this.value = ""; } });
+
+  // Drive-thru
+  function order() {
+    var o = $("order").value.trim() || "Happy Meal";
+    var share = fmt(rand(1200, 4800));
+    var outs = [
+      "Your " + o + " has been collectivized. You will receive 1/" + share + " of everyone's order.",
+      "Order received: " + o + ". The line wraps around the quad 3 times, just like Moscow in 1990. Estimated wait: " + rand(2, 9) + " hours.",
+      "The " + o + " is now property of the people. You may visit it on weekends.",
+      "Comrade, there is no \"I\" in " + o + ". Your share ships next Five-Year Plan."
+    ];
+    $("orderOut").textContent = pick(outs);
+  }
+  $("orderGo").addEventListener("click", order);
+  $("order").addEventListener("keydown", function (e) { if (e.key === "Enter") order(); });
+  order();
+
+  // Referendum: every vote counts, as yes
+  var yes = 4211, no = 0, turnoutBase = 3760;
+  function tally(msg) {
+    var total = yes + no || 1;
+    var yp = Math.round(yes / total * 100);
+    $("yesBar").style.width = yp + "%"; $("noBar").style.width = (100 - yp) + "%";
+    $("yesPct").textContent = yp + "%"; $("noPct").textContent = (100 - yp) + "%";
+    $("voteOut").textContent = msg + " Turnout: " + Math.round(total / turnoutBase * 100) + "% of registered students.";
+  }
+  $("yes").addEventListener("click", function () { yes++; tally("Thank you, comrade. Borscht fountains are on the way. Bring a bowl."); });
+  $("no").addEventListener("click", function () { yes++; tally("Your vote has been counted. It was counted as Yes."); });
+
+  // Membership card
+  var duties = [
+    "Guarding the good microwave in the student union",
+    "Minister of Snack Redistribution",
+    "Official Counter of Library Chairs",
+    "Keeper of the Group Chat",
+    "Head of the Department of Saying \"Actually\"",
+    "Supervisor of the Five-Year Plan's spreadsheet",
+    "Ambassador to the Campus Squirrels"
+  ];
+  $("joinForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = $("jName").value.trim();
+    if (!name) { $("jName").focus(); return; }
+    $("cName").textContent = "Comrade " + name;
+    $("cMajor").textContent = $("jMajor").value.trim() || "Undeclared (declared by the State)";
+    $("cNo").textContent = String(rand(1, 9999999)).padStart(7, "0");
+    $("cDuty").textContent = pick(duties);
+    document.querySelector(".card .label").textContent = "Party Membership Card · Official";
+  });
+})();
+</script>
+
 </body>
 </html>
